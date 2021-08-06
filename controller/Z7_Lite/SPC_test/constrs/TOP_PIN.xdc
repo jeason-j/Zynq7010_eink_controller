@@ -1,4 +1,3 @@
-@ -0,0 +1,28 @@
 set_property PACKAGE_PIN U15 [get_ports A]
 set_property PACKAGE_PIN T12 [get_ports B]
 set_property PACKAGE_PIN V13 [get_ports SW]
