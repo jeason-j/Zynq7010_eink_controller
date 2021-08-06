@@ -67,9 +67,11 @@ always @(posedge clk) begin
                 STATE           <= IDEL;
             end
         end
+        
         default:begin
             STATE               <= IDEL;
         end
+        
     endcase
 end
 
