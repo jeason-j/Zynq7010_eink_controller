@@ -8,10 +8,10 @@ module SPC_test(
     output reg [7:0] globalCount
     );
 
-parameter IDEL   = 3'b000,
-          STATE1 = 3'b001,
-          STATE2 = 3'b010,
-          DONE   = 3'b100;
+parameter IDEL                  = 3'b000,
+          STATE1                = 3'b001,
+          STATE2                = 3'b010,
+          DONE                  = 3'b100;
 
 reg [2:0] STATE;
 reg lastSib;
@@ -21,6 +21,7 @@ reg flag;
 
 always @(posedge clk) begin
     case(STATE)
+    
         IDEL:begin
             lastSib             <= B;
             STATE               <= STATE1; 
@@ -67,11 +68,11 @@ always @(posedge clk) begin
                 STATE           <= IDEL;
             end
         end
-        
+
         default:begin
             STATE               <= IDEL;
         end
-        
+
     endcase
 end
 
